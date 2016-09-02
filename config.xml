@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.recepuncu.arackabul"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <name>AracKabul</name>
+
+    <description>
+        Araç Kabul Uygulaması
+    </description>
+
+    <author href="http://www.recepuncu.com" email="recepuncu@gmail.com">
+        Recep Uncu
+    </author>
+	
+	<plugin name="org.apache.cordova.device" spec="0.3.0" source="pgb" />
+	<plugin name="cordova-plugin-device" source="npm" />
+	<plugin name="cordova-plugin-inappbrowser" source="npm" />
+	<plugin name="cordova-plugin-statusbar" source="npm" />
+	<plugin name="cordova-plugin-camera" source="npm" />
+	
+	<preference name="StatusBarBackgroundColor" value="#2196F3" />
+	
+</widget>
