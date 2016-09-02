@@ -5,10 +5,10 @@
         versionCode = "10" 
         version     = "1.0.0" >
 
-    <name>AracKabul</name>
+    <name>Araç Kabul</name>
 
     <description>
-        Araç Kabul Uygulaması
+        Ücretsiz sahip olacağınız bir hesapla tamirhanenizdeki tüm araçlar kayıt altında.
     </description>
 
     <author href="http://www.recepuncu.com" email="recepuncu@gmail.com">
