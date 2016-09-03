@@ -36,13 +36,13 @@ function ($scope, $stateParams) {
 
 }])
       
-.controller('oturumACtrl', ['$scope', '$stateParams', '$cordovaDevice', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('oturumACtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $cordovaDevice) {
+function ($scope, $stateParams) {
 
-	var uuid = $cordovaDevice.getUUID();
-	alert( uuid );
+	//var uuid = $cordovaDevice.getUUID();
+	//alert( uuid );
 	
 }])
  
