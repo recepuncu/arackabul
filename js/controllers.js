@@ -42,7 +42,7 @@ function ($scope, $stateParams) {
 function ($scope, $stateParams, $cordovaDevice) {
 
 	var uuid = $cordovaDevice.getUUID();
-	alert( uuid );
+	//alert( uuid );
 	
 }])
  
