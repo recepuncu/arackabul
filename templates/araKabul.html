@@ -14,7 +14,8 @@
                 </label>
             </form>
             <div class=" item item-image">
-                <img src="img/EJcmgjxtRvO4x4m7BqmA_1472816944_camera.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                <img ng-show="imgURI === undefined" ng-click="takePicture()" src="img/EJcmgjxtRvO4x4m7BqmA_1472816944_camera.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
             </div>
         </div>
         <div id="araKabul-button-bar3" class="button-bar">
