@@ -34,24 +34,21 @@ function ($scope, $stateParams) {
 .controller('oturumACtrl', ['$scope', '$stateParams', '$http',
 function ($scope, $stateParams, $http) {
 	$scope.kayitOl = function(data){
-		alert(_id + ' : kayıt edilecek');
 		var settings = {
-		  "method": 'POST',
 		  "async": true,
 		  "crossDomain": true,
 		  "url": "https://arackabul.herokuapp.com/?islem=kayit-ol",
 		  "method": "POST",
 		  "headers": {
-			"cache-control": "no-cache",			
 			"content-type": "application/x-www-form-urlencoded"
 		  },
-		  "data": {
+		  "data": $.param({
 			"id": _id,
 			"adi": data.adi,
 			"soyadi": data.soyadi,
 			"kullanici_adi": data.kullanici_adi,
 			"sifre": data.sifre
-		  }
+		  })
 		}		
 		$http(settings).then(function(){
 			alert('Kayıt edildi.');
