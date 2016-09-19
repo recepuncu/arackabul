@@ -10,26 +10,26 @@
             <ion-list id="oturumA-list2">
                 <label class="item item-input" id="oturumA-input6" name="txtAd">
                     <span class="input-label">Ad</span>
-                    <input type="text" placeholder="Ad">
+                    <input ng-model="kayit.adi" type="text" placeholder="Ad">
                 </label>
                 <label class="item item-input" id="oturumA-input9" name="txtSoyadi">
                     <span class="input-label">Soyadı</span>
-                    <input type="text" placeholder="Soyadı">
+                    <input ng-model="kayit.soyadi" type="text" placeholder="Soyadı">
                 </label>
                 <label class="item item-input" id="oturumA-input7" name="txtKullaniciAdi">
                     <span class="input-label">Kullanıcı adı</span>
-                    <input type="text" placeholder="Kullanıcı adı">
+                    <input ng-model="kayit.kullanici_adi" type="text" placeholder="Kullanıcı adı">
                 </label>
                 <label class="item item-input" id="oturumA-input8" name="txtSifre">
                     <span class="input-label">Şifre</span>
-                    <input type="password" placeholder="Şifre">
+                    <input ng-model="kayit.sifre" type="password" placeholder="Şifre">
                 </label>
                 <label class="item item-input" id="oturumA-input10" name="txtSifre">
                     <span class="input-label"></span>
-                    <input type="password" placeholder="Şifre tekrar">
+                    <input ng-model="kayit.sifreTekrar" type="password" placeholder="Şifre tekrar">
                 </label>
             </ion-list>
-            <button id="oturumA-button11" class="button button-positive  button-block">Kayıt Ol</button>
+            <button ng-click="kayitOl(kayit)" id="oturumA-button11" class="button button-positive  button-block">Kayıt Ol</button>
         </form>
         <h5 id="oturumA-heading5" style="color:#000000;text-align:center;">- veya -</h5>
         <form id="oturumA-form6" class="list">

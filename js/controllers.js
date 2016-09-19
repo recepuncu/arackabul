@@ -1,8 +1,6 @@
 angular.module('app.controllers', [])
   
-.controller('araKabulCtrl', ['$scope', '$stateParams', '$cordovaCamera', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('araKabulCtrl', ['$scope', '$stateParams', '$cordovaCamera',
 function ($scope, $stateParams, $cordovaCamera) {
 	
     $scope.takePicture = function() {
@@ -18,7 +16,6 @@ function ($scope, $stateParams, $cordovaCamera) {
             correctOrientation: true,
             saveToPhotoAlbum: false
         };
-
         $cordovaCamera.getPicture(options).then(function(imageData) {
             $scope.imgURI = "data:image/jpeg;base64," + imageData;
         }, function(err) {
@@ -28,18 +25,27 @@ function ($scope, $stateParams, $cordovaCamera) {
 
 }])
    
-.controller('LemDetaylarCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('LemDetaylarCtrl', ['$scope', '$stateParams',
 function ($scope, $stateParams) {
 
 
 }])
       
-.controller('oturumACtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-	
+.controller('oturumACtrl', ['$scope', '$stateParams', '$http',
+function ($scope, $stateParams, $http) {
+	$scope.kayitOl = function(data){
+		alert(_id + ' : kayıt edilecek');
+		var req = {
+		 method: 'POST',
+		 url: 'https://arackabul.herokuapp.com/?islem=kayit-ol',
+		 headers: {'Content-Type': undefined},
+		 data: { id: _id, adi: data.adi, soyadi: data.soyadi, kullanici_adi: data.kullanici_adi, sifre: data.sifre }
+		}
+		$http(req).then(function(){
+			alert('Kayıt edildi.');
+		}, function(){
+			alert('Kayıt edilemedi!');
+		});
+	}
 }])
  
