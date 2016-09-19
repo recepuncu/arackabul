@@ -37,9 +37,9 @@ function ($scope, $stateParams, $http) {
 		alert(_id + ' : kayıt edilecek');
 		var req = {
 		 method: 'POST',
-		 url: 'https://arackabul.herokuapp.com/?islem=kayit-ol',
-		 headers: {'Content-Type': undefined},
-		 data: { id: _id, adi: data.adi, soyadi: data.soyadi, kullanici_adi: data.kullanici_adi, sifre: data.sifre }
+		 url: 'https://arackabul.herokuapp.com/?islem=kayit-ol',		 
+		 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+		 data: $.param({ id: _id, adi: data.adi, soyadi: data.soyadi, kullanici_adi: data.kullanici_adi, sifre: data.sifre })
 		}
 		$http(req).then(function(){
 			alert('Kayıt edildi.');
