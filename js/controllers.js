@@ -39,7 +39,7 @@ angular.module('app.controllers', [])
 					var settings = {
 						"async" : true,
 						"crossDomain" : true,
-						"url" : "https://arackabul.herokuapp.com/?islem=kayit-ol",
+						"url" : "https://arackabul.herokuapp.com/index.php?islem=kayit-ol",
 						"method" : "POST",
 						"headers" : {
 							"content-type" : "application/x-www-form-urlencoded"
