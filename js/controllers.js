@@ -52,8 +52,9 @@ angular.module('app.controllers', [])
 				}
 				$http(settings).then(function () {
 					alert('Kayıt edildi.');
-				}, function () {
+				}, function (data, stts) {
 					alert('Kayıt edilemedi!');
+					alert(data);
 				});
 			}
 		}
