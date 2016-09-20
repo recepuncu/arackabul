@@ -34,27 +34,30 @@ angular.module('app.controllers', [])
 .controller('oturumACtrl', ['$scope', '$stateParams', '$http',
 		function ($scope, $stateParams, $http) {
 			$scope.kayitOl = function (data) {
-				var settings = {
-					"async" : true,
-					"crossDomain" : true,
-					"url" : "https://arackabul.herokuapp.com/?islem=kayit-ol",
-					"method" : "POST",
-					"headers" : {
-						"content-type" : "application/x-www-form-urlencoded"
-					},
-					"data" : {
-						"id" : _id,
-						"adi" : data.adi,
-						"soyadi" : data.soyadi,
-						"kullanici_adi" : data.kullanici_adi,
-						"sifre" : data.sifre
-					}
-				}
-				$http(settings).then(function () {
-					alert('Kayıt edildi.');
-				}, function (data, stts) {
-					alert('Kayıt edilemedi!');
-					alert(data);
+				var data = data;
+				$(function(){
+					var settings = {
+						"async" : true,
+						"crossDomain" : true,
+						"url" : "https://arackabul.herokuapp.com/?islem=kayit-ol",
+						"method" : "POST",
+						"headers" : {
+							"content-type" : "application/x-www-form-urlencoded"
+						},
+						"data" : $.param({
+							"id" : _id,
+							"adi" : data.adi,
+							"soyadi" : data.soyadi,
+							"kullanici_adi" : data.kullanici_adi,
+							"sifre" : data.sifre
+						})
+					};
+					$http(settings).then(function () {
+						alert('Kayıt edildi.');
+					}, function (data, stts) {
+						alert('Kayıt edilemedi!');
+						alert( JSON.stringify(data) );
+					});					
 				});
 			}
 		}
