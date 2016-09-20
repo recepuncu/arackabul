@@ -31,8 +31,8 @@ function ($scope, $stateParams) {
 
 }])
       
-.controller('oturumACtrl', ['$scope', '$stateParams', '$http',
-function ($scope, $stateParams, $http) {
+.controller('oturumACtrl', ['$scope', '$stateParams', '$http', '$httpParamSerializerJQLike',
+function ($scope, $stateParams, $http, $httpParamSerializerJQLike) {
 	$scope.kayitOl = function(data){
 		var settings = {
 		  "async": true,
@@ -42,14 +42,14 @@ function ($scope, $stateParams, $http) {
 		  "headers": {
 			"content-type": "application/x-www-form-urlencoded"
 		  },
-		  "data": $.param({
+		  "data": $httpParamSerializerJQLike({
 			"id": _id,
 			"adi": data.adi,
 			"soyadi": data.soyadi,
 			"kullanici_adi": data.kullanici_adi,
 			"sifre": data.sifre
 		  })
-		}		
+		}
 		$http(settings).then(function(){
 			alert('Kayıt edildi.');
 		}, function(){
