@@ -37,23 +37,21 @@ angular.module('app.controllers', [])
                 $scope.kayitOl = function (data) {
                     var data = data;
                     $(function () {
-                        var settings = {
-                            "async": true,
-                            "crossDomain": true,
-                            "url": "https://arackabul.herokuapp.com/index.php?islem=kayit-ol",
-                            "method": "POST",
-                            "headers": {
+                        var req = {                            
+                            url: "https://arackabul.herokuapp.com/index.php?islem=kayit-ol",
+                            method: "POST",
+                            headers: {
                                 "content-type": "application/x-www-form-urlencoded"
                             },
-                            "data": $.param({
-                                "id": _id,
-                                "adi": data.adi,
-                                "soyadi": data.soyadi,
-                                "kullanici_adi": data.kullanici_adi,
-                                "sifre": data.sifre
+                            data: $.param({
+                                'id': _id,
+                                'adi': data.adi,
+                                'soyadi': data.soyadi,
+                                'kullanici_adi': data.kullanici_adi,
+                                'sifre': data.sifre
                             })
                         };
-                        $http(settings).then(function () {
+                        $http(req).then(function () {
                             alert('Kayıt edildi.');
                         }, function (data, stts) {
                             alert('Kayıt edilemedi!');
