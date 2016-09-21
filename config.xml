@@ -29,7 +29,12 @@
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
 	<plugin name="cordova-plugin-statusbar" source="npm" />
 	<plugin name="cordova-plugin-camera" source="npm" />
+	<plugin name="cordova-plugin-whitelist" source="npm" />
 	
 	<preference name="StatusBarBackgroundColor" value="#2196F3" />
+	
+	<allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+	<allow-navigation href="data:*" />	
 	
 </widget>

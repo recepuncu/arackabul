@@ -37,7 +37,8 @@ angular.module('app.controllers', [])
                 $scope.kayitOl = function (data) {
                     var data = data;
                     $(function () {
-                        var req = {                            
+                        var req = {              
+							cache: false,
                             url: "https://arackabul.herokuapp.com/index.php?islem=kayit-ol",
                             method: "POST",
                             headers: {
