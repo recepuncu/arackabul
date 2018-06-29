@@ -29,7 +29,8 @@
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
 	<plugin name="cordova-plugin-statusbar" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
-	
+	<plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+	    
 	<preference name="StatusBarBackgroundColor" value="#2196F3" />
 	
 	<allow-navigation href="http://*/*" />
