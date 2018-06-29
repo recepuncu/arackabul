@@ -23,7 +23,8 @@
 		<icon src="res/android/drawable-xxhdpi/icon.png" density="xxhdpi" />
 		<icon src="res/android/drawable-xxxhdpi/icon.png" density="xxxhdpi" />		
 	</platform>	
-		
+	
+	<plugin name="cordova-plugin-camera" spec="^4.0.3" />
 	<plugin name="cordova-plugin-device" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
 	<plugin name="cordova-plugin-statusbar" source="npm" />
