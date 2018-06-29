@@ -27,8 +27,7 @@
 	<plugin name="cordova-plugin-camera" spec="^4.0.3" />
 	<plugin name="cordova-plugin-device" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
-	<plugin name="cordova-plugin-statusbar" source="npm" />
-	<plugin name="cordova-plugin-camera" source="npm" />
+	<plugin name="cordova-plugin-statusbar" source="npm" />	
 	<plugin name="cordova-plugin-whitelist" source="npm" />
 	
 	<preference name="StatusBarBackgroundColor" value="#2196F3" />
